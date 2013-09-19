@@ -1,0 +1,37 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>    
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script language="javaScript" src="js/functions.js"></script> 
+        <script language="javaScript" src="js/getUserMediaDeclaration.js"></script>
+        <script language="javaScript" src="js/filterEffects.js"></script> 
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="css/buttonsStyles.css" />
+        <link rel="stylesheet" type="text/css" href="css/filtersToCanvas.css" />
+    <style type="text/css">        
+        body
+        {background-image: url(img/fondo.jpg);}        
+    </style>  
+    </head>
+    <body> 
+        <video onclick="setDefaultFiler(this);" autoplay id="vid" title="Click me to set default filters"></video>
+        <canvas id="canvas" width="550" height="480"></canvas>       
+    <script>    
+        var video = document.querySelector('#vid');        
+        var canvas = document.querySelector('#canvas');        
+        var ctx = canvas.getContext('2d');        
+    </script>   
+    <fieldset id="myfieldset"><legend id="mylegend">"Choise the option"</legend>
+        <div style=" padding-left: 350px">
+         <a onclick="snapShot();" href="#" class="button orange">Take a Picture</a>  
+         <a onclick="changeFilter(video);" href="#" class="button orange">Apply Filters</a>
+         <a onclick="donwloadImage();" href="#" class="button orange">Download this Picture</a>
+        </div>
+    </fieldset>  
+    </body>   
+</html>
