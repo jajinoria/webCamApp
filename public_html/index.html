@@ -19,22 +19,25 @@ and open the template in the editor.
     </style>  
     </head>
     <body> 
-        <video onclick="setDefaultFiler(this);" autoplay id="vid" title="Click me to set default filters"></video>
-        <canvas id="canvas" width="550" height="480"></canvas>       
+        <video style="display: none" 
+         autoplay id="vid" title="Click me to set default filters"></video>
+        <canvas onclick="setDefaultFiler(this);
+        "id="canvas" width="550" height="480"></canvas>
+        <canvas id="canvasNew" width="550" height="480"></canvas> 
     <script>    
         var video = document.querySelector('#vid');        
         var canvas = document.querySelector('#canvas');        
         var ctx = canvas.getContext('2d');        
+        var canvasPIC = document.querySelector('#canvasPIC');        
+        var ctxPIC = canvasNew.getContext('2d');        
     </script>   
     <fieldset id="myfieldset"><legend id="mylegend">"Choise the option"</legend>
         <div style=" padding-left: 350px">
             <a id="snapShotButton" onclick="snapShot();" href="#" class="button orange">Take a Picture</a>  
-            <a  id="changeFilterButton" onclick="changeFilter(video);" href="#" class="button orange">Apply Filters</a>
+            <a  id="changeFilterButton" onclick="changeFilter(canvas);" href="#" class="button orange">Apply Filters</a>
             <a id="captureVideoButton" onclick="notImplementedYet();" href="#" class="button orange">Capture a Video</a>
             <a id="downloadPictureButton" onclick="donwloadImage();" href="#" class="button orange">Download this Picture</a>
         </div>
-    </fieldset> 
-    
-    
+    </fieldset>    
     </body>   
 </html>
