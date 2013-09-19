@@ -26,6 +26,5 @@ function notImplementedYet()
 function drawVideoFrame() {
     requestAnimationFrame(drawVideoFrame);
     ctx.drawImage(video, 0, 0);
-}
-;
+};
 requestAnimationFrame(drawVideoFrame);
