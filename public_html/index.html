@@ -18,14 +18,21 @@ and open the template in the editor.
         {background-image: url(img/fondo.jpg);}        
     </style>  
     </head>
-    <body> 
-        <article id="canvasVideos">
+    <body>
+         <header>
+            
+             <figure style="padding-left: 50px" class="logo">                 
+                 <img style="float: left"src="img/logo.png" alt="logo" />
+                 <h1 id="logoText">Enjoy with your webcam</hi>       
+             </figure>            
+         </header>       
+        <section id="canvasVideos">
              <video style="display: none" 
              accesskey=""  autoplay id="vid" title="Click me to set default filters"></video>
              <canvas onclick="setDefaultFiler(this);
              "id="canvas" width="550" height="480"></canvas>
              <canvas id="canvasPIC" width="550" height="480"></canvas> 
-        </article> 
+        </section>
         <script>    
               var video = document.querySelector('#vid');        
               var canvas = document.querySelector('#canvas');        

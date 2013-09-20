@@ -41,6 +41,14 @@ body
     border-color: black;
     
 }
+#logoFieldSet
+{
+    width:1090px;
+    background: darkslategray;
+    border-width: 3px;
+    border-color: black; 
+    border-radius: 10px 15px;
+}
 
 #divFielSet
 {
@@ -51,6 +59,11 @@ body
 #canvasVideos
 {
     padding-left:100px;
-    padding-top:50px;
+    padding-top: 10px;
+    
+}
+#logoText
+{color: black; 
+ text-shadow: white 0.1em 0.1em 0.2em
 }
 
