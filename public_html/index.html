@@ -23,13 +23,13 @@ and open the template in the editor.
          autoplay id="vid" title="Click me to set default filters"></video>
         <canvas onclick="setDefaultFiler(this);
         "id="canvas" width="550" height="480"></canvas>
-        <canvas id="canvasNew" width="550" height="480"></canvas> 
+        <canvas id="canvasPIC" width="550" height="480"></canvas> 
     <script>    
         var video = document.querySelector('#vid');        
         var canvas = document.querySelector('#canvas');        
         var ctx = canvas.getContext('2d');        
         var canvasPIC = document.querySelector('#canvasPIC');        
-        var ctxPIC = canvasNew.getContext('2d');        
+        var ctxPIC = canvasPIC.getContext('2d');        
     </script>   
     <fieldset id="myfieldset"><legend id="mylegend">"Choise the option"</legend>
         <div style=" padding-left: 220px">
