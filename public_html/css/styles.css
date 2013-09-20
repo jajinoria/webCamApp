@@ -22,7 +22,6 @@ body
 {
     background-color: silver;
 
-
 }
 
 #mylegend
@@ -30,16 +29,28 @@ body
     font-size: 20px;
     font-family: fantasy;
     font-style: oblique;
-    color: blanchedalmond;
-
-
+    color: black;
+   
 }
+
 #myfieldset
 {
-    width:1100px;
+    width:1090px;
     background: darkslategray;
-    border-width: 6px;
+    border-width: 3px;
+    border-color: black;
+    
 }
 
+#divFielSet
+{
+   padding-left: 100px;
+    
+}
 
+#canvasVideos
+{
+    padding-left:100px;
+    padding-top:50px;
+}
 
