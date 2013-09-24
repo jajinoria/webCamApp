@@ -8,7 +8,7 @@ and open the template in the editor.
         <title>Webcam App</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script language="javaScript" src="js/functions.js"></script> 
-        <script language="javaScript" src="js/getUserMediaDeclaration.js"></script>
+        <script language="javaScript" src="js/getUserMediaDeclaration.js"></script>       
         <script language="javaScript" src="js/filterEffects.js"></script> 
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
         <link rel="stylesheet" type="text/css" href="css/buttonsStyles.css" />
@@ -28,26 +28,33 @@ and open the template in the editor.
          </header>       
         <section id="canvasVideos">
              <video style="display: none" 
-             accesskey=""  autoplay id="vid" title="Click me to set default filters"></video>
+             accesskey=""  autoplay id="vid" title="Click me to set default filters">
+             </video>
+            <video style="display: none" id="remoteVideo" autoplay></video>           
              <canvas onclick="setDefaultFiler(this);
              "id="canvas" width="550" height="480"></canvas>
              <canvas id="canvasPIC" width="550" height="480"></canvas> 
         </section>
         <script>    
-              var video = document.querySelector('#vid');        
+              var video = document.querySelector('#vid');             
               var canvas = document.querySelector('#canvas');        
               var ctx = canvas.getContext('2d');        
               var canvasPIC = document.querySelector('#canvasPIC');        
-              var ctxPIC = canvasPIC.getContext('2d');        
+              var ctxPIC = canvasPIC.getContext('2d'); 
+              var localStream,localPeerConnection, remotePeerConnection = null;
+              var snapShotControler = false;
+              var remoteVideo = document.getElementById("remoteVideo");              
         </script>  
         
         <div id="divFielSet">   
             <fieldset id="myfieldset"><legend id="mylegend">"Choise the option"</legend>
-               <div style=" padding-left: 220px">
+               <div style=" padding-left: 120px">
+               <a id="start" onclick="start();" href="#" class="button orange">On Webcam</a>      
                <a id="snapShotButton" onclick="snapShot();" href="#" class="button orange">Take a Picture</a>  
                <a  id="changeFilterButton" onclick="changeFilter(canvas);" href="#" class="button orange">Apply Filters</a>
-              <a id="captureVideoButton" onclick="notImplementedYet();" href="#" class="button orange">Capture a Video</a>
               <a id="downloadPictureButton" onclick="donwloadImage();" href="#" class="button orange">Download this Picture</a>
+              <a id="videoChat" onclick="startVideoChat();" href="#" class="button orange">VideoChat</a>
+              <a id="videoChat" onclick="stopVideoChat();" href="#" class="button orange"> Stop VideoChat</a>
               </div>
         </div>        
             </fieldset>    
