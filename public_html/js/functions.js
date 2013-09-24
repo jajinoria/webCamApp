@@ -14,7 +14,7 @@ function donwloadImage() {
 }
 
 
-function notImplementedYet(){
+function downloadVideo(){
     alert("not implemented yet");
     //not implemented yet
 }
@@ -41,7 +41,7 @@ var onCameraFail = function(exception) {
 
 function startVideoChat() {
     var servers = null;
-
+    
     localPeerConnection = new webkitRTCPeerConnection(servers);
     localPeerConnection.onicecandidate = gotLocalIceCandidate;
 
